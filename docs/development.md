@@ -3,7 +3,7 @@
 ## Software
 In order to develop Oracle Functions, you need the following software:
 - [Fn CLI](https://github.com/fnproject/fn#install-cli-tool)
-    - Fn cli is partially supported on Windows. It is recommended to use a Linux or Mac. If you are using a Windows machine, using a development enviornment on OCI is explained below
+    - Fn cli is partially supported on Windows. It is recommended to use a Linux or Mac. If you are using a Windows machine, using a development enviornment on OCI is explained [below](#using-a-development-environment-on-oci)
 - [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
 - [Docker](https://docs.docker.com/engine/install/)
 - Text Editor / IDE
