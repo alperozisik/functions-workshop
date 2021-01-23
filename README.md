@@ -16,6 +16,6 @@ IMC organization is EMEA Oracle Partner focused. Any partner from EMEA is welcom
 1. Getting started
     1. [Get started with tenancy](./docs/tenancy.md)
     2. [Configuring development environment](./docs/development.md)
-2. Hello World functions
-3. Cloud Native
+2. [Exercise1](./docs/1-lab/README.md): Writing for the first time: Hello World function
+3. Exercise2: Cloud Native
 4. Troubleshooting
