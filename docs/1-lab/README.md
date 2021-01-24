@@ -99,11 +99,13 @@ You can get the OCID of the function in the following steps:
 4. Click to **Copy OCID**
     ![](./images/Function_101.png)  
 
-    ```shell
-    $ oci fn function invoke --function-id ocid1.fnfunc.oc1.phx.aaaa____uxoa --file "-" --body ""
+```shell
+$ oci fn function invoke --function-id ocid1.fnfunc.oc1.phx.aaaa____uxoa --file "-" --body ""
 
-    > {"message":"Hello World"}
-    ```
+> {"message":"Hello World"}
+```
+You can call the function as above, by replacing the OCID
+
 ### Invoke with an argument
 It is possible to pass arguments to functions. Some functions accept an argument, some does not, based on the code. This Hello World application, if argument is not provided, prints `Hello World` otherwise, will print `Hello <name>`
 
