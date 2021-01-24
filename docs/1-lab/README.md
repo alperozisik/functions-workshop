@@ -1,4 +1,5 @@
 # Create our first application
+In this exercise you will create your very first Functions app, Hello World
 
 ## Step 1: Create a Virtual Cloud Network
 1. From the OCI Services menu, click **Virtual Cloud Networks** under **Networking**. Select the compartment assigned to you from the drop down menu on the left side of the screen(you may need to scroll down to see the dropdown) and Click **Start VCN Wizard**.
@@ -71,3 +72,51 @@ Next we will create our first application.
     Follow the steps documented within Getting Started. On the first step, you need to make a choice of a lanugage selection. You need to delete the other options.
 
     **Important**: While giving a name for repository, on a shared tenancy environment, make sure that it is unique.
+
+## Step5: Invoke function
+In the last step of the **Getting Started**, you have invoked the function, with a command like this:
+```shell
+$ fn invoke WorkshopFunctionApplication my-func
+```
+If your application name or function name is different, adjust further steps accordingly
+
+There are other ways to invoke that function. You can invoke a function:
+- using fn cli
+- using OCI cli
+- signed API call  
+    Creating a signed API call from scratch is tricky. You either need need go through documentation or use an SDK. It is not covered within this exercise
+
+### Invoke using OCI CLI
+The format for invoking function using OCI CLI is the following:
+```shell
+$ oci fn function invoke <function-ocid> --file "<output-filepath>" --body "<request-parameters>"
+```
+You can get the OCID of the function in the following steps:
+1. Open Application
+2. Underfunctions, find the row of the function
+3. Click to the most right context menu
+    ![](./images/Function_100.png)  
+4. Click to **Copy OCID**
+    ![](./images/Function_101.png)  
+
+```shell
+$ oci fn function invoke --function-id ocid1.fnfunc.oc1.phx.aaaa____uxoa --file "-" --body ""
+```
+### Invoke with an argument
+It is possible to pass arguments to functions. Some functions accept an argument, some does not, based on the code. This Hello World application, if argument is not provided, prints `Hello World` otherwise, will print `Hello <name>`
+
+#### Invioke via fn cli
+With fn cli, you need to pipe the output of a program to fn cli to be parsed
+```shell
+$ echo -n '{"name":"John"}' | fn invoke WorkshopFunctionApplication my-func
+
+> {"message":"Hello John"}
+```
+
+#### Invoke via OCI cli
+This time, body argument is modified accordingly
+```shell
+$ oci fn function invoke --function-id ocid1.fnfunc.oc1.phx.aaaa____uxoa --file "-" --body '{"name":"John"}'
+
+> {"message":"Hello John"}
+```
