@@ -30,6 +30,7 @@ Since Object Storage service is a regional service, for each region, permission 
     ```shell
     $ oci os object put  --bucket-name input-bucket --file file3.csv
     ```
+    Replace `input-bucket` name accordingly
 2. Open `input-bucket`. In the **Objects** section new file will be visible for a brief of time; until processing finishes. If you do not see the file:
     1. Console might not have refreshed, just navigate to another section or come back (Same as refreshing the page, but faster)
     2. File might have been processed and moved to `processed-bucket`

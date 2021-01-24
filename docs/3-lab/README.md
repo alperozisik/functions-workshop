@@ -17,6 +17,8 @@ As you have checked so far, the last step does not happen. The file still remain
     ```shell
     $ oci os object put  --bucket-name input-bucket --file file2.csv
     ```
+    Replace `input-bucket` name accordingly
+    
     This will upload second file to the bucket and event automatically will pick it up. This time, since logs are enabled, function will log *COUT* and *CERR* streams
 2. Click on the name of the log
     ![](./images/open-logs.png)  
