@@ -8,8 +8,6 @@ In order to develop Oracle Functions, you need the following software:
 - [Docker](https://docs.docker.com/engine/install/)
 - Text Editor / IDE
     - In this workshop we picked [Visual Studio Code](https://code.visualstudio.com/download). Using other IDE is up to you
-- [Node.JS](https://nodejs.org/en/download/): in this workshop examples are prepared in Node.js)
-    - Fn project supports more than just Node.js: Go, Java, Python, Ruby, C# Core
 - [Git](https://git-scm.com/downloads)
 
 ## Test run
@@ -23,16 +21,7 @@ Assuming you have installed all, let's make a test run:
     > fatal: not a git repository (or any of the parent directories): .git
     ```
     Getting this error is expected
-2. Node.js
-    ```shell
-    $ node --version
-    ```
-    response:
-    ```shell
-    > v14.15.4
-    ```
-    Version could be this or better. At least major as 14
-3. Docker
+2. Docker
     ```shell
     $ docker ps
     ```
@@ -41,7 +30,7 @@ Assuming you have installed all, let's make a test run:
     > CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
     ```
     If you need to `sudo docker`, means you have a missing post installation step. Follow the [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/) guide
-4. OCI
+3. OCI
     ```shell
     $ oci iam compartment list
     ```
@@ -54,7 +43,7 @@ Assuming you have installed all, let's make a test run:
     - [Required Keys and OCIDs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm)
     
     After configuring OCI, retry first command
-5. Fn
+4. Fn
     ```shell
     fn --version
     ```
